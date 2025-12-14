@@ -21,57 +21,63 @@
         <main class="main-content">
             <h2 class="page-title">TRPEC Professional Development</h2>
 
-            <div class="videos-container">
-                <!-- Video 1 -->
-                <div class="video-card">
-                    <h3 class="video-title">TRPEC Unity</h3>
-                    <p class="video-description">
-                        A comprehensive framework unifying teachers, students, and families around AI-ready education.
-                    </p>
-                    <div class="video-wrapper">
-                        <video
-                            class="video-player"
-                            poster="assets/poster1.jpg"
-                            controls
-                            playsinline
-                            preload="metadata"
-                        >
-                            <source src="assets/video1.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                        <div class="play-overlay" onclick="playVideo(this)">
-                            <svg class="play-icon" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M8 5v14l11-7z"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <span class="video-duration">4:44</span>
-                </div>
+            <!-- Video Toggle -->
+            <div class="video-toggle">
+                <button class="toggle-btn active" data-video="1">
+                    <span class="toggle-title">AI Empowerment</span>
+                    <span class="toggle-duration">4:44</span>
+                </button>
+                <button class="toggle-btn" data-video="2">
+                    <span class="toggle-title">Unity</span>
+                    <span class="toggle-duration">1:52</span>
+                </button>
+            </div>
 
-                <!-- Video 2 -->
-                <div class="video-card">
-                    <h3 class="video-title">TRPEC AI Empowerment</h3>
-                    <p class="video-description">
-                        Real-world examples of how AI transforms K-12 communities across California.
-                    </p>
-                    <div class="video-wrapper">
-                        <video
-                            class="video-player"
-                            poster="assets/poster2.jpg"
-                            controls
-                            playsinline
-                            preload="metadata"
-                        >
-                            <source src="assets/video2.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                        <div class="play-overlay" onclick="playVideo(this)">
-                            <svg class="play-icon" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M8 5v14l11-7z"/>
-                            </svg>
-                        </div>
+            <!-- Video 1: AI Empowerment (4:44) -->
+            <div class="video-card active" id="video-1">
+                <h3 class="video-title">TRPEC AI Empowerment</h3>
+                <p class="video-description">
+                    A comprehensive framework unifying teachers, students, and families around AI-ready education.
+                </p>
+                <div class="video-wrapper">
+                    <video
+                        class="video-player"
+                        controls
+                        playsinline
+                        preload="metadata"
+                    >
+                        <source src="assets/video1.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="play-overlay" onclick="playVideo(this)">
+                        <svg class="play-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
                     </div>
-                    <span class="video-duration">1:52</span>
+                </div>
+            </div>
+
+            <!-- Video 2: Unity (1:52) -->
+            <div class="video-card" id="video-2">
+                <h3 class="video-title">TRPEC Unity</h3>
+                <p class="video-description">
+                    Real-world examples of how AI transforms K-12 communities across California.
+                </p>
+                <div class="video-wrapper">
+                    <video
+                        class="video-player"
+                        controls
+                        playsinline
+                        preload="metadata"
+                    >
+                        <source src="assets/video2.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="play-overlay" onclick="playVideo(this)">
+                        <svg class="play-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
+                    </div>
                 </div>
             </div>
         </main>
@@ -85,6 +91,26 @@
     </div>
 
     <script>
+        // Toggle between videos
+        document.querySelectorAll('.toggle-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Pause all videos
+                document.querySelectorAll('video').forEach(v => v.pause());
+
+                // Update toggle buttons
+                document.querySelectorAll('.toggle-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                // Show selected video
+                const videoNum = btn.dataset.video;
+                document.querySelectorAll('.video-card').forEach(card => card.classList.remove('active'));
+                document.getElementById('video-' + videoNum).classList.add('active');
+
+                // Reset play overlays
+                document.querySelectorAll('.play-overlay').forEach(o => o.style.display = 'flex');
+            });
+        });
+
         function playVideo(overlay) {
             const wrapper = overlay.parentElement;
             const video = wrapper.querySelector('video');
