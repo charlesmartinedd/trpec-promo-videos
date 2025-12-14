@@ -23,7 +23,7 @@ Real-world examples of how AI transforms K-12 communities across California.
 
 ## Deployment
 - **GitHub Pages**: https://charlesmartinedd.github.io/trpec-promo-videos
-- **Netlify**: [Pending]
+- **Netlify**: https://trpec-videos.netlify.app
 
 ## License
 All content is property of The Right Path Educational Consulting.
