@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unity - The Right Path Educational Consulting</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <img src="assets/logo.png" alt="The Right Path" class="logo">
+            <h1 class="brand-name">The Right Path Educational Consulting</h1>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="video-card active">
+                <h3 class="video-title">TRPEC Unity</h3>
+                <p class="video-description">
+                    Real-world examples of how AI transforms K-12 communities across California.
+                </p>
+                <div class="video-wrapper">
+                    <video
+                        class="video-player"
+                        controls
+                        playsinline
+                        preload="metadata"
+                    >
+                        <source src="assets/video2.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="play-overlay" onclick="playVideo(this)">
+                        <svg class="play-icon" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <a href="https://www.rightpathed.com" target="_blank" class="cta-link">
+                Learn More at rightpathed.com
+            </a>
+        </footer>
+    </div>
+
+    <script>
+        function playVideo(overlay) {
+            const wrapper = overlay.parentElement;
+            const video = wrapper.querySelector('video');
+            overlay.style.display = 'none';
+            video.play();
+        }
+
+        document.querySelectorAll('video').forEach(video => {
+            video.addEventListener('pause', () => {
+                if (video.currentTime < video.duration) {
+                    video.parentElement.querySelector('.play-overlay').style.display = 'flex';
+                }
+            });
+            video.addEventListener('ended', () => {
+                video.parentElement.querySelector('.play-overlay').style.display = 'flex';
+            });
+            video.addEventListener('play', () => {
+                video.parentElement.querySelector('.play-overlay').style.display = 'none';
+            });
+        });
+    </script>
+</body>
+</html>

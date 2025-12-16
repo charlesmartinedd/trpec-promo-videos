@@ -287,3 +287,91 @@ video::-webkit-media-controls-time-remaining-display,
 video::-webkit-media-controls-fullscreen-button {
     filter: brightness(1.2);
 }
+
+/* Landing Page Styles */
+.landing-content {
+    text-align: center;
+}
+
+.landing-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.75rem;
+    background: linear-gradient(135deg, var(--text-white) 0%, var(--light-purple) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.landing-subtitle {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    margin-bottom: 2.5rem;
+}
+
+.video-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.video-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 2rem 2.5rem;
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-radius: 20px;
+    text-decoration: none;
+    color: var(--text-white);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    min-width: 280px;
+}
+
+.video-button:hover {
+    background: rgba(103, 61, 230, 0.3);
+    border-color: var(--accent-purple);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(103, 61, 230, 0.3);
+}
+
+.button-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+}
+
+.button-duration {
+    font-size: 0.9rem;
+    color: var(--accent-purple);
+    font-weight: 500;
+}
+
+.button-desc {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    max-width: 220px;
+    line-height: 1.4;
+}
+
+@media (max-width: 700px) {
+    .video-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .video-button {
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .landing-title {
+        font-size: 1.75rem;
+    }
+}
