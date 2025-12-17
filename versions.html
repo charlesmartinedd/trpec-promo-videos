@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRPEC Video Versions Archive</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        html, body {
+            height: auto;
+            overflow: auto;
+        }
+        .container {
+            height: auto;
+            min-height: 100vh;
+            padding: 2rem 3rem 3rem;
+        }
+        .versions-grid {
+            display: grid;
+            gap: 1rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+        .version-row {
+            display: grid;
+            grid-template-columns: 100px 1fr 100px 100px;
+            gap: 1rem;
+            align-items: center;
+            padding: 1rem 1.5rem;
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            border-radius: 12px;
+            backdrop-filter: blur(20px);
+        }
+        .version-row:hover {
+            background: rgba(103, 61, 230, 0.2);
+            border-color: var(--accent-purple);
+        }
+        .version-commit {
+            font-family: monospace;
+            font-size: 0.85rem;
+            color: var(--accent-purple);
+            font-weight: 600;
+        }
+        .version-desc {
+            font-size: 0.9rem;
+            color: var(--text-white);
+            line-height: 1.4;
+        }
+        .version-date {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+        .download-link {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: var(--accent-purple);
+            color: var(--text-white);
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-weight: 500;
+            border-radius: 6px;
+            text-align: center;
+            transition: all 0.2s ease;
+        }
+        .download-link:hover {
+            background: var(--azure-blue);
+            transform: translateY(-1px);
+        }
+        .section-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--text-white);
+            margin: 2rem 0 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--card-border);
+        }
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+            transition: color 0.2s ease;
+        }
+        .back-link:hover {
+            color: var(--text-white);
+        }
+        .kangaroo-note {
+            background: rgba(103, 61, 230, 0.3);
+            border: 1px solid var(--accent-purple);
+            border-radius: 12px;
+            padding: 1rem 1.5rem;
+            margin: 1.5rem auto;
+            max-width: 800px;
+            text-align: center;
+        }
+        .kangaroo-note strong {
+            color: var(--light-purple);
+        }
+        @media (max-width: 800px) {
+            .version-row {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 0.75rem;
+            }
+            .container {
+                padding: 1.5rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <img src="assets/logo.png" alt="The Right Path" class="logo">
+            <h1 class="brand-name">The Right Path Educational Consulting</h1>
+        </header>
+
+        <main class="main-content" style="justify-content: flex-start; padding-top: 1rem;">
+            <a href="index.html" class="back-link">&larr; Back to Videos</a>
+
+            <h2 class="landing-title" style="font-size: 2rem; margin-bottom: 0.5rem;">Video Versions Archive</h2>
+            <p class="landing-subtitle" style="margin-bottom: 1rem;">All versions of TRPEC videos for download</p>
+
+            <div class="kangaroo-note">
+                <strong>Looking for the kangaroo?</strong> Check versions before Dec 16 2:56 AM (commits 7580679 and earlier) - these contain the anime/illustration clips before they were replaced with realistic footage.
+            </div>
+
+            <div class="versions-grid">
+                <h3 class="section-title">AI Empowerment (Video 1)</h3>
+
+                <div class="version-row">
+                    <span class="version-commit">9b07e70</span>
+                    <div>
+                        <div class="version-desc">Fix: Crop clips to 16:9 (no black bars) + re-encode</div>
+                        <div class="version-date">Dec 16, 4:35 AM - 132 MB</div>
+                    </div>
+                    <span></span>
+                    <a href="versions/video1_9b07e70.mp4" class="download-link" download>Download</a>
+                </div>
+
+                <div class="version-row">
+                    <span class="version-commit">674e3fc</span>
+                    <div>
+                        <div class="version-desc">African American students and administrators footage</div>
+                        <div class="version-date">Dec 16, 4:04 AM - 133 MB</div>
+                    </div>
+                    <span></span>
+                    <a href="versions/video1_674e3fc.mp4" class="download-link" download>Download</a>
+                </div>
+
+                <div class="version-row">
+                    <span class="version-commit">7f01587</span>
+                    <div>
+                        <div class="version-desc">Replace anime/illustration with realistic diverse footage</div>
+                        <div class="version-date">Dec 16, 2:56 AM - 138 MB</div>
+                    </div>
+                    <span></span>
+                    <a href="versions/video1_7f01587.mp4" class="download-link" download>Download</a>
+                </div>
+
+                <div class="version-row" style="border-color: var(--accent-purple); background: rgba(103, 61, 230, 0.25);">
+                    <span class="version-commit">7580679</span>
+                    <div>
+                        <div class="version-desc">Fix audio + new instrumental (last version with anime clips)</div>
+                        <div class="version-date">Dec 16, 2:13 AM - 153 MB</div>
+                    </div>
+                    <span></span>
+                    <a href="versions/video1_7580679.mp4" class="download-link" download>Download</a>
+                </div>
+
+                <div class="version-row">
+                    <span class="version-commit">749a3d8</span>
+                    <div>
+                        <div class="version-desc">Split website into separate pages + update video</div>
+                        <div class="version-date">Dec 16, 1:38 AM - 138 MB</div>
+                    </div>
+                    <span></span>
+                    <a href="versions/video1_749a3d8.mp4" class="download-link" download>Download</a>
+                </div>
+
+                <div class="version-row">
+                    <span class="version-commit">2f4acec</span>
+                    <div>
+                        <div class="version-desc">Fix audio delay (no more chipmunk) + 2s instrumental ending</div>
+                        <div class="version-date">Dec 14, 1:06 PM - 96 MB</div>
+                    </div>
+                    <span></span>
+                    <a href="versions/video1_2f4acec.mp4" class="download-link" download>Download</a>
+                </div>
+
+                <div class="version-row">
+                    <span class="version-commit">b151ab5</span>
+                    <div>
+                        <div class="version-desc">Add 1.5s audio delay before Scene 10 narration</div>
+                        <div class="version-date">Dec 14, 12:53 PM - 91 MB</div>
+                    </div>
+                    <span></span>
+                    <a href="versions/video1_b151ab5.mp4" class="download-link" download>Download</a>
+                </div>
+
+                <div class="version-row">
+                    <span class="version-commit">6106414</span>
+                    <div>
+                        <div class="version-desc">Replace stressed student with AI teacher clip (Freepik Kling)</div>
+                        <div class="version-date">Dec 14, 4:26 AM - 96 MB</div>
+                    </div>
+                    <span></span>
+                    <a href="versions/video1_6106414.mp4" class="download-link" download>Download</a>
+                </div>
+
+                <div class="version-row">
+                    <span class="version-commit">3f4b5a1</span>
+                    <div>
+                        <div class="version-desc">Replace stressed student with positive teacher clip at 2:40</div>
+                        <div class="version-date">Dec 14, 3:44 AM - 92 MB</div>
+                    </div>
+                    <span></span>
+                    <a href="versions/video1_3f4b5a1.mp4" class="download-link" download>Download</a>
+                </div>
+
+                <div class="version-row">
+                    <span class="version-commit">de0e7f4</span>
+                    <div>
+                        <div class="version-desc">Remove TRPEC Professional Development heading</div>
+                        <div class="version-date">Dec 14, 3:17 AM - 95 MB</div>
+                    </div>
+                    <span></span>
+                    <a href="versions/video1_de0e7f4.mp4" class="download-link" download>Download</a>
+                </div>
+
+                <div class="version-row">
+                    <span class="version-commit">5a25309</span>
+                    <div>
+                        <div class="version-desc">Switch video names, add toggle, increase video size 30%</div>
+                        <div class="version-date">Dec 14, 3:09 AM - 95 MB</div>
+                    </div>
+                    <span></span>
+                    <a href="versions/video1_5a25309.mp4" class="download-link" download>Download</a>
+                </div>
+
+                <div class="version-row">
+                    <span class="version-commit">a48a44e</span>
+                    <div>
+                        <div class="version-desc">Update README with Netlify URL</div>
+                        <div class="version-date">Dec 14, 3:06 AM - 95 MB</div>
+                    </div>
+                    <span></span>
+                    <a href="versions/video1_a48a44e.mp4" class="download-link" download>Download</a>
+                </div>
+
+                <div class="version-row">
+                    <span class="version-commit">516ce12</span>
+                    <div>
+                        <div class="version-desc">Initial commit: TRPEC video landing page</div>
+                        <div class="version-date">Dec 14, 3:01 AM - 95 MB</div>
+                    </div>
+                    <span></span>
+                    <a href="versions/video1_516ce12.mp4" class="download-link" download>Download</a>
+                </div>
+
+                <h3 class="section-title">Unity (Video 2)</h3>
+
+                <div class="version-row">
+                    <span class="version-commit">9b07e70</span>
+                    <div>
+                        <div class="version-desc">Fix: Crop clips to 16:9 (no black bars) + re-encode</div>
+                        <div class="version-date">Dec 16, 4:35 AM - 42 MB</div>
+                    </div>
+                    <span></span>
+                    <a href="versions/video2_9b07e70.mp4" class="download-link" download>Download</a>
+                </div>
+
+                <div class="version-row">
+                    <span class="version-commit">674e3fc</span>
+                    <div>
+                        <div class="version-desc">African American students and administrators footage</div>
+                        <div class="version-date">Dec 16, 4:04 AM - 42 MB</div>
+                    </div>
+                    <span></span>
+                    <a href="versions/video2_674e3fc.mp4" class="download-link" download>Download</a>
+                </div>
+
+                <div class="version-row">
+                    <span class="version-commit">7f01587</span>
+                    <div>
+                        <div class="version-desc">Replace anime/illustration with realistic diverse footage</div>
+                        <div class="version-date">Dec 16, 2:56 AM - 42 MB</div>
+                    </div>
+                    <span></span>
+                    <a href="versions/video2_7f01587.mp4" class="download-link" download>Download</a>
+                </div>
+
+                <div class="version-row">
+                    <span class="version-commit">7580679</span>
+                    <div>
+                        <div class="version-desc">Fix audio + new instrumental at 10%</div>
+                        <div class="version-date">Dec 16, 2:13 AM - 42 MB</div>
+                    </div>
+                    <span></span>
+                    <a href="versions/video2_7580679.mp4" class="download-link" download>Download</a>
+                </div>
+
+                <div class="version-row">
+                    <span class="version-commit">749a3d8</span>
+                    <div>
+                        <div class="version-desc">Split website into separate pages + update video</div>
+                        <div class="version-date">Dec 16, 1:38 AM - 42 MB</div>
+                    </div>
+                    <span></span>
+                    <a href="versions/video2_749a3d8.mp4" class="download-link" download>Download</a>
+                </div>
+
+                <div class="version-row">
+                    <span class="version-commit">2f4acec</span>
+                    <div>
+                        <div class="version-desc">Fix audio delay (no more chipmunk) + 2s instrumental ending</div>
+                        <div class="version-date">Dec 14, 1:06 PM - 42 MB</div>
+                    </div>
+                    <span></span>
+                    <a href="versions/video2_2f4acec.mp4" class="download-link" download>Download</a>
+                </div>
+
+                <div class="version-row">
+                    <span class="version-commit">b151ab5</span>
+                    <div>
+                        <div class="version-desc">Add 1.5s audio delay before Scene 10 narration</div>
+                        <div class="version-date">Dec 14, 12:53 PM - 42 MB</div>
+                    </div>
+                    <span></span>
+                    <a href="versions/video2_b151ab5.mp4" class="download-link" download>Download</a>
+                </div>
+
+                <div class="version-row">
+                    <span class="version-commit">6106414</span>
+                    <div>
+                        <div class="version-desc">Replace stressed student with AI teacher clip</div>
+                        <div class="version-date">Dec 14, 4:26 AM - 42 MB</div>
+                    </div>
+                    <span></span>
+                    <a href="versions/video2_6106414.mp4" class="download-link" download>Download</a>
+                </div>
+
+                <div class="version-row">
+                    <span class="version-commit">3f4b5a1</span>
+                    <div>
+                        <div class="version-desc">Replace stressed student with positive teacher clip</div>
+                        <div class="version-date">Dec 14, 3:44 AM - 42 MB</div>
+                    </div>
+                    <span></span>
+                    <a href="versions/video2_3f4b5a1.mp4" class="download-link" download>Download</a>
+                </div>
+
+                <div class="version-row">
+                    <span class="version-commit">de0e7f4</span>
+                    <div>
+                        <div class="version-desc">Remove TRPEC Professional Development heading</div>
+                        <div class="version-date">Dec 14, 3:17 AM - 42 MB</div>
+                    </div>
+                    <span></span>
+                    <a href="versions/video2_de0e7f4.mp4" class="download-link" download>Download</a>
+                </div>
+
+                <div class="version-row">
+                    <span class="version-commit">5a25309</span>
+                    <div>
+                        <div class="version-desc">Switch video names, add toggle, increase video size 30%</div>
+                        <div class="version-date">Dec 14, 3:09 AM - 42 MB</div>
+                    </div>
+                    <span></span>
+                    <a href="versions/video2_5a25309.mp4" class="download-link" download>Download</a>
+                </div>
+
+                <div class="version-row">
+                    <span class="version-commit">a48a44e</span>
+                    <div>
+                        <div class="version-desc">Update README with Netlify URL</div>
+                        <div class="version-date">Dec 14, 3:06 AM - 42 MB</div>
+                    </div>
+                    <span></span>
+                    <a href="versions/video2_a48a44e.mp4" class="download-link" download>Download</a>
+                </div>
+
+                <div class="version-row">
+                    <span class="version-commit">516ce12</span>
+                    <div>
+                        <div class="version-desc">Initial commit: TRPEC video landing page</div>
+                        <div class="version-date">Dec 14, 3:01 AM - 42 MB</div>
+                    </div>
+                    <span></span>
+                    <a href="versions/video2_516ce12.mp4" class="download-link" download>Download</a>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer" style="margin-top: 2rem;">
+            <a href="https://www.rightpathed.com" target="_blank" class="cta-link">
+                Learn More at rightpathed.com
+            </a>
+        </footer>
+    </div>
+</body>
+</html>
